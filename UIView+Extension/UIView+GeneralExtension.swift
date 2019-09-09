@@ -1,15 +1,13 @@
 //
-//  UIView+GeneralExtension.swift
-//  TenthPlan
-//
+//  UIView+GeneralExtension.swift//
 //  Created by evan beh on 9/9/19.
 //  Copyright © 2019 evan beh. All rights reserved.
 //
 
 import UIKit
 
-extension UIView {
-
+public extension UIView {
+    
     func roundBorders(value:Float)
     {
         self.layer.cornerRadius = CGFloat(value)
@@ -24,7 +22,7 @@ extension UIView {
         self.layer.borderColor = borderColor.cgColor
     }
     
-    public func roundCorners(corners:UIRectCorner, radius: CGFloat)
+    func roundCorners(corners:UIRectCorner, radius: CGFloat)
     {
         let maskLayer = CAShapeLayer()
         maskLayer.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
