@@ -14,7 +14,9 @@ Pod::Spec.new do |spec|
   spec.license      = "2017-2019 evanbeh"
   spec.author             = { "Evan Beh" => "imexlight@gmail.com" }
   
-  spec.source       = { :path => '.' }
+  s.source       = { :git => "https://github.com/evan-beh/UICategory.git", :branch => "master",
+                   :tag => s.version.to_s }
+
   spec.source_files  = UIView+Extension/*.{h,m,swift}"
   
   
